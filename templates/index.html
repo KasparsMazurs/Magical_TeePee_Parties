@@ -2,23 +2,10 @@
 
 {% block content %}
 <!-- Display posts -->
-{% for post in post_list %}
-<div class="col-md-4">
-    <div class="card mb-4">
-        <div class="card-body">
-            <div class="image-container">
-                <img class="card-img-top" src=" {{ post.featured_image.url }}">
-            </div>
-            <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                <h2 class="card-title">{{ post.title }}</h2>
-                <p class="card-text">{{ post.excerpt }}</p>
-            </a>
-            <hr />
-            <p class="card-text text-muted h6">{{ post.created_on}}</p>
-        </div>
-    </div>
-</div>
-{% endfor %}
+<!-- {% for post in post_list %}
+
+
+{% endfor %} -->
 
 <!-- Paginated -->
 {% if is_paginated %}
