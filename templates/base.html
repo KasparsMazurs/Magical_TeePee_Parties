@@ -5,24 +5,54 @@
 
 <head>
     <title>Magical TeePee Parties</title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
+
+    <!-- Link my css -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
-
 <body>
-<p>Hello!</p>
 
+    <!-- Logo/registration -->
+
+    <div>
+        <h1 class ="header">Magical TeePee Parties</h1>
+    </div>
+
+    <!-- Nav bar -->
+
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Book a party</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+        </li>
+    </ul>
+
+    <!-- Content -->
     <main>
         {% block content %}
         <!-- Content Goes here -->
@@ -31,7 +61,24 @@
 
     <!-- Footer -->
     <footer>
+        <ul class="social-networks">
+            <li>
+                <a href="#" target="_blank" rel="noopener" aria-label="Visit our Facebook page (open in a new tab)"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" rel="noopener" aria-label="Visit our Instagram page (open in a new tab)"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#" target="_blank" rel="noopener" aria-label="Visit our TikTok page (open in a new tab)"><i class="fa-brands fa-tiktok"></i></a>
+            </li>
+        </ul>
     </footer>
+
+    <!--My JS script-->
+    <script src="{% static 'js/script.js' %}"></script>
+
+    <!-- font awesome scrip -->
+    <script src="https://kit.fontawesome.com/83b6b0cfb3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,3 +1,44 @@
-body {
-    background-color: #0654f0;
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'sans-serif';
+}
+
+/** Header **/
+
+.header {
+    font-family: 'Dancing Script', 'sans-serif';
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/** Nav bar **/
+
+.nav-link[aria-current="page"]{
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
+
+/** footer **/
+footer {
+    height: 150px;
+}
+
+.social-networks {
+    text-align: center;   
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #3a3a3a;
 }
