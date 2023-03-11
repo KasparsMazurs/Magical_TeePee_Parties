@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
+from .forms import CommentForm
 
 class PostList(generic.ListView):
     model = Post
@@ -22,5 +23,31 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
+            },
+        )
+    
+
+    def post(self, request, slug, *args, **kwargs):
+
+        queryset = Post.objects.filter(status=1)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
+
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            "post_detail.html",
+            {
+                "comments": comments,
+                "commented": True,
+                "comment_form": comment_form,
             },
         )

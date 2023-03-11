@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="row-bg">
     <div class="row h-100 d-flex justify-content-center align-items-center">
         <div class="col-md-4">
-            <img src=" {{ post.featured_image.url }}" width="100%">
+            <img class="max-high" src=" {{ post.featured_image.url }}" width="100%">
         </div>
         <div class="col-md-8">
             <h1>{{ post.title }}</h1>
@@ -37,6 +38,25 @@
     <hr />
     {{ comment.body | linebreaks }} 
 </div>
+
+
+<div>
+    <div>
+        {% if commented %}
+        <div>
+            Your comment is awaiting approval
+        </div>
+        {% else %}
+
+        <h3>Leave a comment:</h3>
+        <p>Posting as: {{ user.username }}</p>
+        <form method="post" style="margin-top: 1.3em;">
+            {{ comment_form | crispy }}
+            {% csrf_token %}
+            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+        </form>
+
+        {% endif %}
 
 
 {% endfor %}

@@ -140,3 +140,7 @@ a:active {
 .card-text {
     font-family: Arial;
 }
+
+.max-high {
+    max-height: 300px;
+}
