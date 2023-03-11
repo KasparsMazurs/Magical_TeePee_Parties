@@ -78,6 +78,14 @@ a:active {
     text-decoration: underline;
 }
 
+/** Poste image **/
+
+.card-img-top {
+    max-height: 250px;
+}
+
+
+
 /** Jumbotron **/
 .jumbotron-bg {
     background: url(https://lh3.googleusercontent.com/pw/AMWts8DnX9QXFn6qlryaWRe_ezAyHr049c909EQfS_1zXUvLIA-PH0h74MAKI4HTOCQSVoOpApPc-4nbqMSYdog9NtuHgQ5a6DSLkA2p-XBBm0myPbMkiXnwUjuBPbPJqYzFoxVlWfG9k5AapjY_xF-ypSm4Og=w2595-h1946-no?authuser=0) no-repeat bottom right fixed;
