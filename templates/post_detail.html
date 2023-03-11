@@ -1,5 +1,44 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="row-bg">
+    <div class="row h-100 d-flex justify-content-center align-items-center">
+        <div class="col-md-4">
+            <img src=" {{ post.featured_image.url }}" width="100%">
+        </div>
+        <div class="col-md-8">
+            <h1>{{ post.title }}</h1>
+            <p class="text-muted">{{ post.created_on }}</p>
+        </div>
+    </div>
+    <div class="row h-100 d-flex justify-content-center align-items-center">
+        <p>
+            {{ post.content | safe }}
+        </p>
+    </div>
+    <div class="float-end">
+        <button type="button" class="btn btn-primary">Share <i class="fa-solid fa-share"></i> </button>
+    </div>
+</div>
+
+<h1 class="text-center">
+    Comments
+</h1>
+
+{% for comment in comments %}
+
+<div class="row container border border-2 comments-bg">
+    <div class="col-md-12">
+        <strong>{{ comment.name }}</strong>
+        <p class="text-muted">
+            {{ comment.created_on }}
+        </p>
+    </div>
+    <hr />
+    {{ comment.body | linebreaks }} 
+</div>
+
+
+{% endfor %}
 
 {% endblock content %}

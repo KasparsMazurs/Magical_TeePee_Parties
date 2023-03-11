@@ -17,6 +17,10 @@ body{
     padding-bottom: 20px;
 }
 
+h1 {
+    font-family: 'Dancing Script', 'sans-serif';
+}
+
 /** Nav bar **/
 
 .nav-link {
@@ -60,6 +64,7 @@ footer {
 .row-bg {
     background-color: rgba(252, 136, 136, 0.4);
     overflow: hidden;
+    margin: 2px;
 }
 
 .image-container {
@@ -75,7 +80,7 @@ a {
 a:hover,
 a:active {
     color: #000000;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /** Poste image **/
@@ -124,4 +129,14 @@ a:active {
     height: 100%;
 }
 
+/** Post details **/
 
+.comments-bg {
+    background-color: rgba(136, 144, 252, 0.4);
+    overflow: hidden;
+    margin: 2px;
+}
+
+.card-text {
+    font-family: Arial;
+}
