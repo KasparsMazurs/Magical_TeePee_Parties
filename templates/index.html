@@ -1,15 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Display Jumbotron -->
+<div class="jumbotron-bg">
+    <div class="bg d-flex justify-content-center align-items-center">
+      <a class="btn btn-primary btn-color" href="#" role="button">Book a party</a>
+    </div>
+</div>
+
 <!-- Display posts -->
 {% for post in post_list %}
 <div class="card">
     <div class="card-body">
-        <div class="row container h-100 d-flex justify-content-center align-items-center border border-2">
+        <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 row-bg">
             <div class="col-md-4">
                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 text-center">
                 <a href="{% url 'post_detail' post.slug  %}" class="post-link">
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text">{{ post.excerpt }}</p>
@@ -17,10 +24,10 @@
             </div>
             <div class="row">
                 <hr />
-                <div class="col-6">
+                <div class="col-md-6">
                     <p class="card-text text-muted">{{ post.created_on}}</p>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="float-end">
                         <button type="button" class="btn btn-primary">Comment <i class="fa-regular fa-comment"></i> </button>
                         <button type="button" class="btn btn-primary">Share <i class="fa-solid fa-share"></i> </button>
