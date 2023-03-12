@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<div class="login-bg text-center">
+  <h3 >{% trans "Sign In" %}</h3>
+  <p >{% blocktrans %} Welcome to the Magical TeePee Parties. If you like to Book a party or leave a comment please log in.</p>
+  <p >If you have not created an account yet, then
+    <a class="link" href="{{ signup_url }}"><strong>sign up</strong></a>
+    first.{% endblocktrans %}</p>
+    <hr />
+    <form method="POST" action="{% url 'account_login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+    </form>
+</div>
+{% endblock %}

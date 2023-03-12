@@ -17,6 +17,21 @@
         </p>
     </div>
     <div class="float-end">
+            <strong>
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="like"><i class="fa-solid fa-thumbs-up"></i></button>
+                    {% else %}
+                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="like"><i class="fa-regular fa-thumbs-up"></i></button>
+                    {% endif %}
+                </form>
+                {% else %}
+                <span><i class="fa-regular fa-thumbs-up"></i></span>
+                {% endif %}
+                <span>{{ total_likes }} </span>
+            </strong>
         <button type="button" class="btn btn-primary">Share <i class="fa-solid fa-share"></i> </button>
     </div>
 </div>
@@ -37,12 +52,9 @@
     <hr />
     {{ comment.body | linebreaks }} 
 </div>
-
 {% endfor %}
-<!-- test -->
-<div class="col-md-4 card mb-4  mt-3 ">
-    <div class="card-body">
-        <!-- For later -->
+<div class="container border border-2 comments-bg margin-top">
+    <div>
         {% if commented %}
         <div class="alert alert-success" role="alert">
             Your comment is awaiting approval
@@ -52,10 +64,10 @@
 
         <h3>Leave a comment:</h3>
         <p>Posting as: {{ user.username }}</p>
-        <form method="post" style="margin-top: 1.3em;">
+        <form class="text-center text-muted" method="post" style="margin-top: 1.3em;">
             {{ comment_form | crispy }}
             {% csrf_token %}
-            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+            <button class="btn btn-secondary" type="submit" class="btn btn-signup btn-lg">Submit</button>
         </form>
         {% endif %}
         {% endif %}

@@ -152,3 +152,32 @@ a:active {
 .max-high {
     max-height: 300px;
 }
+
+.margin-top {
+    margin-top: 2vh;
+}
+
+/** Login/reg **/
+
+.login-bg {
+    background-color: rgba(252, 136, 136, 0.4);
+    height: 50vh;
+    padding: 3vh;
+}
+
+/** like btn **/
+
+.like {
+    font-size: x-large;
+    color: #0026ff;
+    border: none;
+    background: transparent;
+}
+
+.like:hover,
+.like:active {
+    font-size: x-large;
+    color: #0026ff;
+    background: transparent;
+    border: none;
+}
