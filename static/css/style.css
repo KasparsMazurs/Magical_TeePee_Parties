@@ -34,6 +34,14 @@ h1 {
     color: black;
 }
 
+.bold:hover,
+.bold {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+
 /** footer **/
 footer {
     height: 150px;

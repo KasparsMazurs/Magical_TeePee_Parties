@@ -39,26 +39,6 @@
     {{ comment.body | linebreaks }} 
 </div>
 
-
-<div>
-    <div>
-        {% if commented %}
-        <div>
-            Your comment is awaiting approval
-        </div>
-        {% else %}
-
-        <h3>Leave a comment:</h3>
-        <p>Posting as: {{ user.username }}</p>
-        <form method="post" style="margin-top: 1.3em;">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-        </form>
-
-        {% endif %}
-
-
 {% endfor %}
 
 {% endblock content %}

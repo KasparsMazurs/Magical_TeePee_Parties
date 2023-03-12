@@ -24,9 +24,29 @@
 <body>
 
     <!-- Logo/registration -->
-
-    <div>
-        <h1 class ="header">Magical TeePee Parties</h1>
+    <div class="row">
+        <div class="col-md-10">
+            <a href="{% url 'home' %}"><h1 class ="header">Magical TeePee Parties</h1></a>
+        </div>
+        <div class="col-md-2">
+            <ul class="nav justify-content-end">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <p class="nav-link bold">Welcome, {{ request.user.username }}!</p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
     </div>
 
     <!-- Nav bar -->
