@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, PostGallery
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
@@ -20,3 +20,10 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+
+@admin.register(PostGallery)
+class GalleryImageAdmin(SummernoteModelAdmin):
+    list_display = ('title', 'slug', 'title_image', 'images')
+    prepopulated_fields = {'slug': ('title',)}
+    summernote_fields = ('description',)

@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, PostGallery
 from .forms import CommentForm
+from django.views.generic import ListView
 
 
 class PostList(generic.ListView):
@@ -21,7 +22,6 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-        
         total_likes = post.likes.count()
 
         return render(
@@ -36,9 +36,8 @@ class PostDetail(View):
                 "total_likes": total_likes,
             },
         )
-    
-    def post(self, request, slug, *args, **kwargs):
 
+    def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -69,8 +68,7 @@ class PostDetail(View):
         )
 
 
-class PostLike(View):
-    
+class PostLike(View):  
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -79,3 +77,12 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class GalleryListView(ListView):
+    model = PostGallery
+    template_name = 'gallery.html'
+    context_object_name = 'images'
+
+    def get_queryset(self):
+        return PostGallery.objects.all()
