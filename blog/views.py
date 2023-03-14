@@ -82,7 +82,7 @@ class PostLike(View):
 class GalleryListView(ListView):
     model = PostGallery
     template_name = 'gallery.html'
-    context_object_name = 'images'
+    context_object_name = 'post_galleries'
 
     def get_queryset(self):
         return PostGallery.objects.all()

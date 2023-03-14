@@ -2,6 +2,13 @@
 
 {% block content %}
 
-<h1>Hello</h1>
+{% for post_gallery in post_galleries %}
+  <div>
+    <h2>{{ post_gallery.title }}</h2>
+    <p>{{ post_gallery.description }}</p>
+    <img src="{{ post_gallery.title_image.url }}" alt="{{ post_gallery.title }}">
+    <p>{{ post_gallery.created_on }}</p>
+  </div>
+{% endfor %}
 
 {%endblock%}
