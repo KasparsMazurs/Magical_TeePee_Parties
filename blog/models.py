@@ -46,12 +46,14 @@ class Meta:
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
 
+class Image(models.Model):
+    image = CloudinaryField('image')
 
 class PostGallery(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     title_image = CloudinaryField('Title_image', default='placeholder')
-    images = CloudinaryField('images', default='placeholder')
+    images = models.ManyToManyField(Image, related_name='gallery_images')
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
 

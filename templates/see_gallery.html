@@ -5,6 +5,6 @@
     <img src="{{ object.title_image.url }}" alt="{{ object.title }}" width="50%">
     <p>{{ object.description }}</p>
     {% for image in images %}
-        <img src="{{ image.images.url }}" alt="{{ image.title }}">
+        <img src="{{ image.image.url }}" alt="{{ image.title }}">
     {% endfor %}
 {% endblock %}

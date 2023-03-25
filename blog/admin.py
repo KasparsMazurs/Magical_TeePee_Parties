@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, PostGallery
+from .models import Post, Comment, PostGallery, Image
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
@@ -22,22 +22,21 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(approved=True)
 
 
+class ImageInline(admin.TabularInline):
+    model = PostGallery.images.through
+
 @admin.register(PostGallery)
-class GalleryImageAdmin(SummernoteModelAdmin):
+class GalleryImageAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'title_image')
     prepopulated_fields = {'slug': ('title',)}
+    inlines = [ImageInline]
     fieldsets = (
         (None, {
             'fields': ('title', 'slug', 'title_image', 'description')
         }),
-        ('Images', {
-            'fields': ('images',),
-            'classes': ('collapse',),
-        }),
     )
-    def get_form(self, request, obj=None, **kwargs):
-        self.extra = 3
-        form = super().get_form(request, obj, **kwargs)
-        form.base_fields['images'].widget = admin.widgets.AdminFileWidget(
-            attrs={'multiple': True})
-        return form
+
+
+@admin.register(Image)
+class ImageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'image')
