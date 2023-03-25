@@ -88,10 +88,11 @@ class GalleryListView(ListView):
         return PostGallery.objects.all()
 
 
-class SeeGalleryView(DetailView):
+class SeeGalleryView(generic.DetailView):
     model = PostGallery
     template_name = 'see_gallery.html'
-    context_object_name = 'post_gallery'
 
-    def get_queryset(self):
-        return PostGallery.objects.filter(slug=self.kwargs['slug'])
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['images'] = PostGallery.objects.all()
+        return context
