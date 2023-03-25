@@ -24,11 +24,29 @@
 <body>
 
     <!-- Logo/registration -->
-    <div class="row">
-        <div class="col-md-10">
-            <a href="{% url 'home' %}"><h1 class ="header">Magical TeePee Parties</h1></a>
+    <!-- Nav bar -->
+    <div class="row nav-bg">
+        <div class="col-md-8">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="{% url 'home' %}"><h1 class ="header">Magical TeePee Parties</h1></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="#">Book a party</a>
+                        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                        <a class="nav-link" href="#">Contact us</a>
+                        <a class="nav-link" href="#">About us</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
             <ul class="nav justify-content-end">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -49,28 +67,8 @@
         </div>
     </div>
 
-    <!-- Nav bar -->
+    
 
-    <ul class="nav justify-content-end">
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Products</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Book a party</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contact us</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
-        </li>
-    </ul>
 
     <!-- Content -->
     <main>
