@@ -2,13 +2,13 @@
 
 {% block content %}
 
-{% for post_gallery in post_galleries %}
+{% for gallery in post_galleries %}
   <div>
-    <h2>{{ post_gallery.title }}</h2>
-    <p>{{ post_gallery.description }}</p>
-    <img src="{{ post_gallery.title_image.url }}" alt="{{ post_gallery.title }}">
-    <p>{{ post_gallery.created_on }}</p>
+    <a href="{% url 'see_gallery' slug=gallery.slug %}"><h2>{{ gallery.title }}</h2></a>
+    <p>{{ gallery.description }}</p>
+    <img src="{{ gallery.title_image.url }}" alt="{{ gallery.title }}">
+    <p>{{ gallery.created_on }}</p>
   </div>
 {% endfor %}
 
-{%endblock%}
+{% endblock %}

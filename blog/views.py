@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, PostGallery
 from .forms import CommentForm
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 
 class PostList(generic.ListView):
@@ -86,3 +86,12 @@ class GalleryListView(ListView):
 
     def get_queryset(self):
         return PostGallery.objects.all()
+
+
+class SeeGalleryView(DetailView):
+    model = PostGallery
+    template_name = 'see_gallery.html'
+    context_object_name = 'post_gallery'
+
+    def get_queryset(self):
+        return PostGallery.objects.filter(slug=self.kwargs['slug'])
