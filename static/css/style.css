@@ -188,15 +188,13 @@ a:active {
 /** Gallery **/
 
 .max-height {
-    max-height: 25vh;
+    height: 25vh;
     overflow: hidden;
 }
 
 .card-height {
     height: 30vh;
 }
-
-
 
 .image {
     max-height: 50vh;

@@ -62,3 +62,19 @@ class PostGallery(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class PostProducts(models.Model):
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=200, unique=True)
+    title_image = CloudinaryField('Title_image', default='placeholder')
+    images = models.ManyToManyField(Image, related_name='Product_images')
+    description = models.TextField()
+    excerpt = models.TextField(blank=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return self.title

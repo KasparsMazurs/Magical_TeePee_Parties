@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, PostGallery, Image
+from .models import Post, Comment, PostGallery, Image, PostProducts
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
@@ -22,21 +22,36 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(approved=True)
 
 
-class ImageInline(admin.TabularInline):
+class GalleryImageInline(admin.TabularInline):
     model = PostGallery.images.through
 
+class ProductImageInline(admin.TabularInline):
+    model = PostProducts.images.through
+
 @admin.register(PostGallery)
-class GalleryImageAdmin(admin.ModelAdmin):
+class GalleryImageAdmin(SummernoteModelAdmin):
     list_display = ('title', 'slug', 'title_image')
     prepopulated_fields = {'slug': ('title',)}
-    inlines = [ImageInline]
+    inlines = [GalleryImageInline]
+    summernote_fields = ('description',)
     fieldsets = (
         (None, {
             'fields': ('title', 'slug', 'title_image', 'description')
         }),
     )
 
-
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('id', 'image')
+
+@admin.register(PostProducts)
+class ProductsImageAdmin(SummernoteModelAdmin):
+    list_display = ('title', 'slug', 'title_image')
+    prepopulated_fields = {'slug': ('title',)}
+    inlines = [ProductImageInline]
+    summernote_fields = ('description', 'excerpt')
+    fieldsets = (
+        (None, {
+            'fields': ('title', 'slug', 'title_image', 'description', 'excerpt')
+        }),
+    )

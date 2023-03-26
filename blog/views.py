@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, PostGallery, Image
+from .models import Post, PostGallery, Image, PostProducts
 from .forms import CommentForm
 from django.views.generic import ListView
 
@@ -94,5 +94,24 @@ class SeeGalleryView(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['images'] = Image.objects.all()
+        context['images'] = self.object.images.all()
+        return context
+
+
+class ProductsListView(ListView):
+    model = PostProducts
+    template_name = 'products.html'
+    context_object_name = 'post_products'
+
+    def get_queryset(self):
+        return PostProducts.objects.all()
+
+
+class ProductView(generic.DetailView):
+    model = PostProducts
+    template_name = 'products_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['images'] = self.object.images.all()
         return context
