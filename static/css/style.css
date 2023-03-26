@@ -201,3 +201,14 @@ a:active {
     width: auto;
     object-fit: scale-down;
 }
+
+/** About us **/
+
+.bg1 {
+    background-color: rgba(252, 136, 136, 0.7);
+    overflow: hidden;
+}
+
+.aboutus-text {
+    font-weight: bold;
+}

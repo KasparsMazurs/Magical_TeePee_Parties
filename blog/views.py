@@ -120,6 +120,12 @@ class ProductView(generic.DetailView):
 class ContactUsView(View):
     template_name = 'contact_us.html'
 
+    def get(self, request):
+        return render(request, self.template_name)
+
 
 class AboutUsView(View):
     template_name = 'about_us.html'
+
+    def get(self, request):
+        return render(request, self.template_name)
