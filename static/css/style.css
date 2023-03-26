@@ -17,8 +17,12 @@ body{
     padding-bottom: 20px;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Dancing Script', 'sans-serif';
+}
+
+h1 {
+    padding-bottom: 3vh;
 }
 
 /** Nav bar **/
