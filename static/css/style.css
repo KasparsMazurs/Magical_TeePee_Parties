@@ -184,3 +184,22 @@ a:active {
     background: transparent;
     border: none;
 }
+
+/** Gallery **/
+
+.max-height {
+    max-height: 25vh;
+    overflow: hidden;
+}
+
+.card-height {
+    height: 30vh;
+}
+
+
+
+.image {
+    max-height: 50vh;
+    width: auto;
+    object-fit: scale-down;
+}

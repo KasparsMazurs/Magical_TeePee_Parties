@@ -6,9 +6,11 @@
   {% for gallery in post_galleries %}
     <div class="col-md-4">
       <a href="{% url 'see_gallery' slug=gallery.slug %}">
-        <div class="card border border-2 row-bg">
+        <div class="card card-height border border-2 row-bg">
           <h2 class="text-center">{{ gallery.title }}</h2>
-          <img src="{{ gallery.title_image.url }}" alt="{{ gallery.title }}">
+          <div class="card max-height">
+            <img src="{{ gallery.title_image.url }}" alt="{{ gallery.title }}">
+          </div>
           <hr />
           <p class="text-muted">{{ gallery.created_on }}</p>
         </div>

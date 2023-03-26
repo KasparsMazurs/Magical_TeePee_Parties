@@ -6,8 +6,8 @@
     <div class="row">
         {% for image in images %}
         <div class="col-md-4">
-            <div class="card border border-2">
-                <img src="{{ image.image.url }}" alt="{{ image.title }}">
+            <div class="card">
+                <img class = "image" src="{{ image.image.url }}" alt="{{ image.title }}">
             </div>
         </div>
         {% endfor %}
