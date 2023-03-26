@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="text-center">{{ object.title }}</h1>
+<div class="row-bg">
+    <h1 class="text-center">{{ object.title }}</h1>
+    <p>
+        {{ object.description | safe }}
+    </p>
+</div>
+<div class="row">
+    {% for image in images %}
+    <div class="col-md-4">
+        <div class="card">
+            <img class = "image" src="{{ image.image.url }}" alt="{{ image.title }}">
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}

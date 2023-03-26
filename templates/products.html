@@ -2,25 +2,24 @@
 
 {% block content %}
 <!-- Display introduction -->
-<div class="text-center">
+<div class="text-center border border-2 row-bg">
     <h1>Welcome to the Magical TeePee Parties product section!</h1>
     <h2>Here you'll find everything you need to create an enchanting and memorable teepee party experience for your little ones. Our collection features a variety of teepee tents, accessories, decorations, and party favors, all inspired by the magical world of unicorns, fairies, and mermaids. With our high-quality and affordable products, you can easily transform your home or backyard into a magical wonderland that your child and their friends will never forget. So let's dive into our product section and start planning your next Magical TeePee Party!</h2>
 </div>
 <!-- Display all products -->
-<div class="row">
-    {% for products in post_products %}
-      <div class="col-md-4">
-        <a href="{% url 'products_detail' slug=products.slug %}">
-          <div class="card card-height border border-2 row-bg">
-            <h2 class="text-center">{{ products.title }}</h2>
-            <div class="card max-height">
-              <img src="{{ products.title_image.url }}" alt="{{ products.title }}">
+{% for products in post_products %}
+<div class="card">
+    <a href="{% url 'products_detail' slug=products.slug %}">
+        <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 row-bg">
+            <div class="col-md-4">
+                <img class="card-img-top" src="{{ products.title_image.url }}" alt="{{ products.title }}">
             </div>
-          </div>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
-
-
+            <div class="col-md-8">
+                <h2>{{ products.title }}</h2>
+                <p>{{ products.excerpt }}</p>
+            </div>
+        </div>
+    </a>
+</div>
+{% endfor %}
 {% endblock %}

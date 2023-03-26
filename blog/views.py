@@ -115,3 +115,11 @@ class ProductView(generic.DetailView):
         context = super().get_context_data(**kwargs)
         context['images'] = self.object.images.all()
         return context
+
+
+class ContactUsView(View):
+    template_name = 'contact_us.html'
+
+
+class AboutUsView(View):
+    template_name = 'about_us.html'
