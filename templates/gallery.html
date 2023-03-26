@@ -7,7 +7,7 @@
     <div class="col-md-4">
       <a href="{% url 'see_gallery' slug=gallery.slug %}">
         <div class="card card-height border border-2 row-bg">
-          <h2 class="text-center">{{ gallery.title }}</h2>
+          <h2 class="text-center nav-link">{{ gallery.title }}</h2>
           <div class="card max-height">
             <img src="{{ gallery.title_image.url }}" alt="{{ gallery.title }}">
           </div>

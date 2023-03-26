@@ -4,7 +4,7 @@
 <!-- Display introduction -->
 <div class="text-center border border-2 row-bg">
     <h1>Welcome to the Magical TeePee Parties product section!</h1>
-    <h2>Here you'll find everything you need to create an enchanting and memorable teepee party experience for your little ones. Our collection features a variety of teepee tents, accessories, decorations, and party favors, all inspired by the magical world of unicorns, fairies, and mermaids. With our high-quality and affordable products, you can easily transform your home or backyard into a magical wonderland that your child and their friends will never forget. So let's dive into our product section and start planning your next Magical TeePee Party!</h2>
+    <p>Here you'll find everything you need to create an enchanting and memorable teepee party experience for your little ones. Our collection features a variety of teepee tents, accessories, decorations, and party favors, all inspired by the magical world of unicorns, fairies, and mermaids. With our high-quality and affordable products, you can easily transform your home or backyard into a magical wonderland that your child and their friends will never forget. So let's dive into our product section and start planning your next Magical TeePee Party!</p>
 </div>
 <!-- Display all products -->
 {% for products in post_products %}
@@ -15,8 +15,8 @@
                 <img class="card-img-top" src="{{ products.title_image.url }}" alt="{{ products.title }}">
             </div>
             <div class="col-md-8">
-                <h2>{{ products.title }}</h2>
-                <p>{{ products.excerpt }}</p>
+                <h2 class="nav-link"> {{ products.title }}</h2>
+                <p>{{ products.excerpt }}<p class="nav-link">[Show more]</p></p> 
             </div>
         </div>
     </a>
