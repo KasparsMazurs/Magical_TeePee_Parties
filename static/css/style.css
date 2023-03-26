@@ -7,6 +7,11 @@ body{
     background: url(https://lh3.googleusercontent.com/pw/AMWts8BCAVOSoi5re3_gWM9fW7Ij_cEwe7zGeKv82Tq9YcfIlcu-PQRYxSKyJu2rYPBPReGcJY5PQdy30V0VpS3I3_hmZMKdMFhFzwky9dJ7rpkYiwirNAsqizd5cMA-hiOpdXtGwqEQkH_jReZEGA9-xrTQpw=s1080-no?authuser=0) no-repeat bottom right fixed;
 }
 
+.text-style {
+    padding: 1vh;
+    padding-left: 3vh;
+}
+
 /** Header **/
 
 .header {
@@ -19,10 +24,6 @@ body{
 
 h1, h2 {
     font-family: 'Dancing Script', 'sans-serif';
-}
-
-h1 {
-    padding-bottom: 3vh;
 }
 
 /** Nav bar **/

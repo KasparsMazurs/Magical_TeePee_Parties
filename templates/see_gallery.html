@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{{ object.title }}</h1>
-    <img src="{{ object.title_image.url }}" alt="{{ object.title }}" width="50%">
-    <p>{{ object.description }}</p>
-    {% for image in images %}
-        <img src="{{ image.image.url }}" alt="{{ image.title }}">
-    {% endfor %}
+    <h1 class="text-center">{{ object.title }}</h1>
+    <p class="text-style">{{ object.description }}</p>
+    <div class="row">
+        {% for image in images %}
+        <div class="col-md-4">
+            <div class="card border border-2">
+                <img src="{{ image.image.url }}" alt="{{ image.title }}">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
