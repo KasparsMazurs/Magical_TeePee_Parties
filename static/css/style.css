@@ -232,3 +232,9 @@ a:active {
     margin-bottom: 4vh;
 }
 
+/** Alert **/
+
+.alert {
+    display: none;
+}
+
