@@ -46,8 +46,10 @@ class Meta:
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
 
+
 class Image(models.Model):
     image = CloudinaryField('image')
+
 
 class PostGallery(models.Model):
     title = models.CharField(max_length=200)
@@ -78,7 +80,7 @@ class PostProducts(models.Model):
 
     def __str__(self):
         return self.title
-   
+
 
 class BookAParty(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
