@@ -78,3 +78,50 @@ class PostProducts(models.Model):
 
     def __str__(self):
         return self.title
+   
+
+class BookAParty(models.Model):
+    slug = models.SlugField(max_length=200, unique=True)
+    party_themes = [
+        ('JU', 'Jungle'),
+        ('UN', 'Unicorn'),
+        ('ME', 'Mermaid'),
+        ('LI', 'Little ladies'),
+        ('GA', 'Gamers'),
+        ('TI', 'Tik Tok'),
+        ('SO', 'Soccer'),
+    ]
+    party_theme = models.CharField(max_length=2, choices=party_themes)
+    balloons = models.BooleanField(default=False)
+    bouncy_castle = models.BooleanField(default=False)
+    ages = [
+        ('4', '4'),
+        ('5', '5'),
+        ('6', '6'),
+        ('7', '7'),
+        ('8', '8'),
+        ('9', '9'),
+        ('10', '10'),
+        ('11', '11'),
+        ('12', '12'),
+        ('13', '13'),
+        ('14', '14'),
+    ]
+    kids_age = models.CharField(max_length=2, choices=ages)
+    teepees = [
+        ('2', '2'),
+        ('3', '3'),
+        ('4', '4'),
+        ('5', '5'),
+        ('6', '6'),
+        ('7', '7'),
+    ]
+    number_of_teepees = models.CharField(max_length=2, choices=teepees)
+    street = models.CharField(max_length=100)
+    city = models.CharField(max_length=50)
+    county = models.CharField(max_length=50)
+    eircode = models.CharField(max_length=10)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.slug
