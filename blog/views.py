@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post, PostGallery, Image, PostProducts
+from .models import Post, PostGallery, PostProducts, BookAParty
 from .forms import CommentForm
 from django.views.generic import ListView
 
@@ -129,3 +129,13 @@ class AboutUsView(View):
 
     def get(self, request):
         return render(request, self.template_name)
+
+
+class BookAPartyView(View):
+    template_name = 'book_a_party.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {})
+
+    def post(self, request):
+        return render(request, self.template_name, {})
