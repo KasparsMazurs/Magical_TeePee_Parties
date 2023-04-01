@@ -122,6 +122,8 @@ class BookAParty(models.Model):
     county = models.CharField(max_length=50)
     eircode = models.CharField(max_length=10)
     date = models.DateField()
+    status = models.IntegerField(choices=STATUS, default=0)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
         return self.slug
