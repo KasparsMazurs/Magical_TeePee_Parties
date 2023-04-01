@@ -20,6 +20,17 @@
     <!-- Link my css -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+    <!-- Link emailjs -->
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("HphiVoW9awdP6YyLK");
+        })();
+    </script>
+
 </head>
 <body>
 
@@ -94,6 +105,7 @@
 
     <!--My JS script-->
     <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/sendEmail.js' %}"></script>
 
     <!-- font awesome scrip -->
     <script src="https://kit.fontawesome.com/83b6b0cfb3.js" crossorigin="anonymous"></script>

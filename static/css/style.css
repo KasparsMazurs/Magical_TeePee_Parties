@@ -223,3 +223,12 @@ a:active {
 .aboutus-text {
     font-weight: bold;
 }
+
+
+/** Contact us **/
+
+.margin {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+
