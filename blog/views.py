@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, PostGallery, PostProducts, BookAParty
-from .forms import CommentForm
+from .forms import CommentForm, BookingForm
 from django.views.generic import ListView
 
 
@@ -135,7 +135,14 @@ class BookAPartyView(View):
     template_name = 'book_a_party.html'
 
     def get(self, request):
-        return render(request, self.template_name, {})
+        form = BookingForm()  # create an instance of the BookingForm
+        context = {'form': form}
+        return render(request, self.template_name, context)
 
     def post(self, request):
-        return render(request, self.template_name, {})
+        form = BookingForm(request.POST)  # create an instance of the BookingForm with the submitted data
+        if form.is_valid():  # validate the form
+            form.save()  # save the form data to the database
+            return HttpResponseRedirect('/thanks/')  # redirect to a thank you page
+        context = {'form': form}
+        return render(request, self.template_name, context)

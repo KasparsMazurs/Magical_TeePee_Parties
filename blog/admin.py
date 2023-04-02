@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, PostGallery, Image, PostProducts
+from .models import Post, Comment, PostGallery, Image, PostProducts, BookAParty
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Post)
@@ -55,3 +55,14 @@ class ProductsImageAdmin(SummernoteModelAdmin):
             'fields': ('title', 'slug', 'title_image', 'description', 'excerpt')
         }),
     )
+
+
+@admin.register(BookAParty)
+class BookAPartyAdmin(admin.ModelAdmin):
+    list_display = ('order_nr', 'party_theme', 'balloons', 'bouncy_castle', 'kids_age', 'number_of_teepees', 'street', 'city', 'county', 'eircode', 'date', 'status', 'price',)
+    list_filter = ('approved', 'party_theme', 'date')
+    search_fields = ('city', 'date', 'email')
+    actions = ['approve_party']
+
+    def approve_party(self, request, queryset):
+        queryset.update(approved=True)

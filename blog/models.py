@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.utils.text import slugify
+
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -83,7 +85,6 @@ class PostProducts(models.Model):
 
 
 class BookAParty(models.Model):
-    slug = models.SlugField(max_length=200, unique=True)
     party_themes = [
         ('JU', 'Jungle'),
         ('UN', 'Unicorn'),
@@ -126,6 +127,15 @@ class BookAParty(models.Model):
     date = models.DateField()
     status = models.IntegerField(choices=STATUS, default=0)
     price = models.DecimalField(max_digits=8, decimal_places=2)
+    approved = models.BooleanField(default=False)
+    email = models.EmailField(default='', blank=False)
+    order_nr = models.SlugField(max_length=200, unique=True, editable=False, default='new_order')
+
+    def save(self, *args, **kwargs):
+        if not self.order_nr:
+            max_id = BookAParty.objects.aggregate(models.Max('id'))['id__max']
+            self.order_nr = slugify(f'order-{max_id+1}')
+        super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.slug
+        return self.order_nr
