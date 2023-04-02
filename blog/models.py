@@ -129,6 +129,7 @@ class BookAParty(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     approved = models.BooleanField(default=False)
     email = models.EmailField(default='', blank=False)
+    additional_info = models.TextField(default='You can add some additional information or ask us a question here.')
     order_nr = models.SlugField(max_length=200, unique=True, editable=False, default='new_order')
 
     def save(self, *args, **kwargs):

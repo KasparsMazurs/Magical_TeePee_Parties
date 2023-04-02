@@ -238,3 +238,12 @@ a:active {
     display: none;
 }
 
+/** BookingForm **/
+
+.extras {
+    margin-left: 2vh;
+}
+
+.additional-info {
+    margin-right: 2vh;
+}

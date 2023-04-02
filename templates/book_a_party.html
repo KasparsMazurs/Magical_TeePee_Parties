@@ -2,13 +2,63 @@
 
 {% block content %}
 
-
-<h1>Book a Party</h1>
-
-<form method="post">
+<form class="container bg1 border border-2" method="post">
+  <h1 class="text-center">Book a Party</h1>
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Submit</button>
+  <div class="form-group">
+    <label for="{{ form.party_theme.id_for_label }}">Party Theme:</label>
+    {{ form.party_theme }}
+  </div>
+  <div class="border border-2">
+    <p>We can offer you extras:</p>
+    <label class="extras" for="{{ form.balloons.id_for_label }}">Balloons:</label>
+    {{ form.balloons }}
+    <label class="extras" for="{{ form.bouncy_castle.id_for_label }}">Bouncy Castle:</label>
+    {{ form.bouncy_castle }}
+  </div>
+  <div>
+    <label for="{{ form.kids_age.id_for_label }}">Kids Age:</label>
+    {{ form.kids_age }}
+  </div>
+  <div>
+    <label for="{{ form.number_of_teepees.id_for_label }}">Number of Teepees:</label>
+    {{ form.number_of_teepees }}
+  </div>
+  <div>
+    <label for="{{ form.street.id_for_label }}">Street:</label>
+    {{ form.street }}
+  </div>
+  <div>
+    <label for="{{ form.city.id_for_label }}">City:</label>
+    {{ form.city }}
+  </div>
+  <div>
+    <label for="{{ form.county.id_for_label }}">County:</label>
+    {{ form.county }}
+  </div>
+  <div>
+    <label for="{{ form.eircode.id_for_label }}">Eircode:</label>
+    {{ form.eircode }}
+  </div>
+  <div>
+    <label for="{{ form.date.id_for_label }}">Date:</label>
+    <!-- {{ form.date }} -->
+    <input type="date" name="date" value="{{ form.date.value|default:'' }}">
+  </div>
+  <div>
+    <label for="{{ form.email.id_for_label }}">Email:</label>
+    {{ form.email }}
+  </div>
+  <div class="border border-2">
+    <label class="float-start additional-info" for="{{ form.additional_info.id_for_label }}">Additional info:</label>
+    {{ form.additional_info }}
+  </div>
+  <div class="d-flex justify-content-center align-items-center">
+    <button type="submit" class="btn btn-primary btn-lg ">Submit</button>
+  </div>
+  
 </form>
 
 {% endblock %}
+
+additional_info
