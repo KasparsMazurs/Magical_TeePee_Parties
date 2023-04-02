@@ -133,9 +133,11 @@ class BookAParty(models.Model):
     order_nr = models.SlugField(max_length=200, unique=True, editable=False, default='new_order')
 
     def save(self, *args, **kwargs):
-        if not self.order_nr:
+        if not self.order_nr or self.order_nr == 'new_order':
             max_id = BookAParty.objects.aggregate(models.Max('id'))['id__max']
             self.order_nr = slugify(f'order-{max_id+1}')
+            while BookAParty.objects.filter(order_nr=self.order_nr).exists():
+                self.order_nr = slugify(f'order-{max_id+1}')
         super().save(*args, **kwargs)
 
     def __str__(self):

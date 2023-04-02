@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, PostGallery, PostProducts, BookAParty
 from .forms import CommentForm, BookingForm
 from django.views.generic import ListView
-
+from django.contrib import messages
+from django.urls import reverse
 
 class PostList(generic.ListView):
     model = Post
@@ -135,14 +136,32 @@ class BookAPartyView(View):
     template_name = 'book_a_party.html'
 
     def get(self, request):
-        form = BookingForm()  # create an instance of the BookingForm
+        form = BookingForm()
         context = {'form': form}
         return render(request, self.template_name, context)
 
     def post(self, request):
-        form = BookingForm(request.POST)  # create an instance of the BookingForm with the submitted data
-        if form.is_valid():  # validate the form
-            form.save()  # save the form data to the database
-            return HttpResponseRedirect('/thanks/')  # redirect to a thank you page
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            # Create a new instance of the BookAParty model and populate its fields with the form data
+            party = BookAParty()
+            party.party_theme = form.cleaned_data['party_theme']
+            party.balloons = form.cleaned_data['balloons']
+            party.bouncy_castle = form.cleaned_data['bouncy_castle']
+            party.kids_age = form.cleaned_data['kids_age']
+            party.number_of_teepees = form.cleaned_data['number_of_teepees']
+            party.street = form.cleaned_data['street']
+            party.city = form.cleaned_data['city']
+            party.county = form.cleaned_data['county']
+            party.eircode = form.cleaned_data['eircode']
+            party.date = form.cleaned_data['date']
+            party.email = form.cleaned_data['email']
+            party.additional_info = form.cleaned_data['additional_info']
+            party.status = '0'
+            party.price = 0.0
+            party.save()
+
+            messages.success(request, 'Your request has been submitted and is pending approval.')
+            return redirect(reverse('home'))
         context = {'form': form}
         return render(request, self.template_name, context)
