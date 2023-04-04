@@ -42,12 +42,15 @@
   </div>
   <div>
     <label for="{{ form.date.id_for_label }}">Date:</label>
-    <!-- {{ form.date }} -->
     <input type="date" name="date" value="{{ form.date.value|default:'' }}">
   </div>
   <div>
     <label for="{{ form.email.id_for_label }}">Email:</label>
     {{ form.email }}
+  </div>
+  <div>
+    <label for="{{ form.phone_number.id_for_label }}">Contact number:</label>
+    {{ form.phone_number }}
   </div>
   <div class="border border-2">
     <label class="float-start additional-info" for="{{ form.additional_info.id_for_label }}">Additional info:</label>

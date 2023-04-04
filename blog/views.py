@@ -4,8 +4,8 @@ from django.http import HttpResponseRedirect
 from .models import Post, PostGallery, PostProducts, BookAParty
 from .forms import CommentForm, BookingForm
 from django.views.generic import ListView
-from django.contrib import messages
 from django.urls import reverse
+
 
 class PostList(generic.ListView):
     model = Post
@@ -156,12 +156,12 @@ class BookAPartyView(View):
             party.eircode = form.cleaned_data['eircode']
             party.date = form.cleaned_data['date']
             party.email = form.cleaned_data['email']
+            party.phone_number = form.cleaned_data['phone_number']
             party.additional_info = form.cleaned_data['additional_info']
             party.status = '0'
             party.price = 0.0
             party.save()
 
-            messages.success(request, 'Your request has been submitted and is pending approval.')
             return redirect(reverse('home'))
         context = {'form': form}
         return render(request, self.template_name, context)
