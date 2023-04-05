@@ -138,7 +138,7 @@ class BookAParty(models.Model):
         default=User.objects.first().id
     )
 
-    def save(self, request=None, *args, **kwargs):
+    def save(self, *args, **kwargs):
         if not self.order_nr or self.order_nr == 'new_order':
             max_id = BookAParty.objects.aggregate(models.Max('id'))['id__max']
             if max_id is None:
@@ -146,10 +146,7 @@ class BookAParty(models.Model):
             self.order_nr = slugify(f'order-{max_id+1}')
             while BookAParty.objects.filter(order_nr=self.order_nr).exists():
                 self.order_nr = slugify(f'order-{max_id+1}')
-            super().save(*args, **kwargs)
-        if request is not None and self.host_id is None:
-            self.host = request.user
-            super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.order_nr
