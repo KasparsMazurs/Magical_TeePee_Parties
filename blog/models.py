@@ -147,7 +147,7 @@ class BookAParty(models.Model):
             while BookAParty.objects.filter(order_nr=self.order_nr).exists():
                 self.order_nr = slugify(f'order-{max_id+1}')
             super().save(*args, **kwargs)
-        if request is not None:
+        if request is not None and self.host_id is None:
             self.host = request.user
             super().save(*args, **kwargs)
 

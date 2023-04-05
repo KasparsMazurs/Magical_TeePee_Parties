@@ -158,8 +158,8 @@ class BookAPartyView(View):
             party.email = form.cleaned_data['email']
             party.phone_number = form.cleaned_data['phone_number']
             party.additional_info = form.cleaned_data['additional_info']
-            party.status = '0'
             party.price = 0.0
+            party.host = request.user
             party.save()
 
             return redirect(reverse('home'))

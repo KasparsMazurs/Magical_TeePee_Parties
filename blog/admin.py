@@ -59,7 +59,7 @@ class ProductsImageAdmin(SummernoteModelAdmin):
 
 @admin.register(BookAParty)
 class BookAPartyAdmin(admin.ModelAdmin):
-    list_display = ('party_theme', 'number_of_teepees', 'city', 'date', 'approved')
+    list_display = ('party_theme', 'number_of_teepees', 'city', 'date', 'approved', 'host', 'price')
     list_filter = ('approved', 'party_theme', 'date')
     search_fields = ('city', 'date', 'email', 'phone_number')
     actions = ['approve_party']
