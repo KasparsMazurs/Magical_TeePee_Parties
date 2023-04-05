@@ -131,14 +131,25 @@ class BookAParty(models.Model):
     phone_number = models.CharField(max_length=50, default='+353 ')
     additional_info = models.TextField(default='You can add some additional information or ask us a question here.')
     order_nr = models.SlugField(max_length=200, unique=True, editable=False, default='new_order')
+    host = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='bookings',
+        default=User.objects.first().id
+    )
 
-    def save(self, *args, **kwargs):
+    def save(self, request=None, *args, **kwargs):
         if not self.order_nr or self.order_nr == 'new_order':
             max_id = BookAParty.objects.aggregate(models.Max('id'))['id__max']
+            if max_id is None:
+                max_id = 0
             self.order_nr = slugify(f'order-{max_id+1}')
             while BookAParty.objects.filter(order_nr=self.order_nr).exists():
                 self.order_nr = slugify(f'order-{max_id+1}')
-        super().save(*args, **kwargs)
+            super().save(*args, **kwargs)
+        if request is not None:
+            self.host = request.user
+            super().save(*args, **kwargs)
 
     def __str__(self):
         return self.order_nr
