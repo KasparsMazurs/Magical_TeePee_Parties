@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Submitted Parties</h1>
+
+{% if parties %}
+  <ul>
+    {% for party in parties %}
+      <li>
+        <h2>{{ party.party_theme }}</h2>
+        <p>Date: {{ party.date }}</p>
+        <p>Price: {{ party.price }}</p>
+        <p>Additional Info: {{ party.additional_info }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>You have not submitted any parties.</p>
+{% endif %}
+
+{% endblock %}

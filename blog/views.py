@@ -165,3 +165,9 @@ class BookAPartyView(View):
             return redirect(reverse('home'))
         context = {'form': form}
         return render(request, self.template_name, context)
+
+def submitted_parties(request):
+    # Fetch parties submitted by the current user
+    parties = BookAParty.objects.filter(host=request.user)
+    context = {'parties': parties}
+    return render(request, 'submitted_parties.html', context)
