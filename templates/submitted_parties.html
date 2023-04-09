@@ -5,16 +5,28 @@
 <h1>Submitted Parties</h1>
 
 {% if parties %}
-  <ul>
     {% for party in parties %}
-      <li>
-        <h2>{{ party.party_theme }}</h2>
-        <p>Date: {{ party.date }}</p>
-        <p>Price: {{ party.price }}</p>
-        <p>Additional Info: {{ party.additional_info }}</p>
-      </li>
+      {% if party.approved %}
+      <h2>These parties are approved:</h2>
+      <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_approved">
+        <div class="col-md-12">
+            <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
+            <p>Data: {{ party.date }}</p>
+            <p>Price: {{ party.price }}</p>
+            <p>You will have: {{ party.number_of_teepees }} teepees</p>
+        </div>
+      </div>
+      {% else %}
+      <h2>These parties are waiting for approval:</h2>
+      <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_pending">
+        <div class="col-md-12">
+            <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
+            <p>Data: {{ party.date }}</p>
+            <p>You will have: {{ party.number_of_teepees }} teepees</p>
+        </div>
+      </div>
+      {% endif %}
     {% endfor %}
-  </ul>
 {% else %}
   <p>You have not submitted any parties.</p>
 {% endif %}

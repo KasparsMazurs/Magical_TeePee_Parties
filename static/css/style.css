@@ -247,3 +247,15 @@ a:active {
 .additional-info {
     margin-right: 2vh;
 }
+
+/** Submitted Parties **/
+
+.bg_approved {
+    background-color: rgba(93, 248, 3, 0.7);
+    overflow: hidden;
+}
+
+.bg_pending {
+    background-color: rgba(253, 244, 116, 0.7);
+    overflow: hidden;
+}
