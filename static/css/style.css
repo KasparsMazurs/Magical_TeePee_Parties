@@ -171,6 +171,10 @@ a:active {
     margin-top: 2vh;
 }
 
+.margin-bottom {
+    margin-bottom: 2vh;
+}
+
 /** Login/reg **/
 
 .login-bg {

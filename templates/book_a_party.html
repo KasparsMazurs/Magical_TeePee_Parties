@@ -1,6 +1,51 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!-- Price list -->
+<div class="container bg1 border border-2 margin-bottom">
+  <div class="row">
+    <div class="col-md-6 border border-2">
+      <h1 class="text-center">TeePee Prices</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <p>One TeePee</p>
+          <p>Two TeePees</p>
+          <p>Three TeePees</p>
+          <p>Fore TeePees</p>
+          <p>Five TeePees</p>
+          <p>Six TeePees</p>
+          <p>Seven TeePees</p>
+        </div>
+        <div class="col-md-6">
+          <p>120 Eur</p>
+          <p>120 Eur</p>
+          <p>180 Eur</p>
+          <p>240 Eur</p>
+          <p>300 Eur</p>
+          <p>360 Eur</p>
+          <p>420 Eur</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 border border-2">
+      <h1 class="text-center">Other Prices</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Travel Expenses</p>
+          <p>Bouncy castle</p>
+          <p>Set of Helium balloons, Foil (CUPCAKES)</p>
+          <p>Set of Helium balloons, Foil (DINOSAURS)</p>
+        </div>
+        <div class="col-md-6">
+          <p>0.18 Eur. per KM</p>
+          <p>50 Eur</p>
+          <p>25 Eur</p>
+          <p>30 Eur</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% if user.is_authenticated %}
 <!-- Book a party form -->
@@ -62,10 +107,10 @@
       <button type="submit" class="btn btn-primary btn-lg ">Submit</button>
     </div>
   </form>
-{% else %}
-  <p>If you want to book a party with us you will need to create an account with us <a class="nav-link" href="{{ signup_url }}"><strong>here.</strong></a> If you already have an account with us please <a class="nav-link" href="{{ login_url }}"><strong>sign in.</strong></a></p>
-{% endif %}
 
-<a class="nav-link" href="{% url 'submitted_parties' %}">Click here if you what to see parties that you are submitted!</a>
+  <a class="nav-link" href="{% url 'submitted_parties' %}">Click here if you what to see parties that you are submitted!</a>
+{% else %}
+  <p>If you want to book a party with us you will need to create an account with us. If you already have an account with us please sign in.</p>
+{% endif %}
 
 {% endblock %}
