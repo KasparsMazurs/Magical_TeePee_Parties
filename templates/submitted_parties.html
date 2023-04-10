@@ -7,7 +7,7 @@
 {% if parties %}
     {% for party in parties %}
       {% if party.approved %}
-      <h2>These parties are approved:</h2>
+      <h2>This party is approved:</h2>
       <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_approved">
         <div class="col-md-12">
             <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
@@ -18,7 +18,7 @@
         </div>
       </div>
       {% else %}
-      <h2>These parties are waiting for approval:</h2>
+      <h2>This party is waiting for approval:</h2>
       <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_pending">
         <div class="col-md-12">
             <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>

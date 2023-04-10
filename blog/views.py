@@ -162,7 +162,7 @@ class BookAPartyView(View):
             party.host = request.user
             party.save()
 
-            return redirect(reverse('home'))
+            return redirect(reverse('submitted-parties'))
         context = {'form': form}
         return render(request, self.template_name, context)
 
@@ -206,7 +206,9 @@ class EditPartyView(View):
         party = get_object_or_404(BookAParty, order_nr=order_nr)
         form = BookingForm(request.POST, instance=party)
         if form.is_valid():
-            form.save()
+            party = form.save(commit=False)  # Don't save yet, just update the approval field
+            party.approved = False
+            form.save() # Save the rest of the form data
             return redirect('submitted_parties')
         context = {'form': form, 'order_nr': order_nr}
         return render(request, self.template_name, context)
