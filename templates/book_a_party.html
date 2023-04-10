@@ -107,8 +107,11 @@
       <button type="submit" class="btn btn-primary btn-lg ">Submit</button>
     </div>
   </form>
-
-  <a class="nav-link" href="{% url 'submitted_parties' %}">Click here if you what to see parties that you are submitted!</a>
+  <a href="{% url 'submitted_parties' %}">
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="button">Check your submitted parties</button>
+    </div>
+  </a>
 {% else %}
   <p>If you want to book a party with us you will need to create an account with us. If you already have an account with us please sign in.</p>
 {% endif %}
