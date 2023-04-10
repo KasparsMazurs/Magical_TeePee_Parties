@@ -166,8 +166,47 @@ class BookAPartyView(View):
         context = {'form': form}
         return render(request, self.template_name, context)
 
+
 def submitted_parties(request):
     # Fetch parties submitted by the current user
     parties = BookAParty.objects.filter(host=request.user)
     context = {'parties': parties}
     return render(request, 'submitted_parties.html', context)
+
+
+class EditPartyView(View):
+    template_name = 'edit_party.html'
+
+    def get(self, request, order_nr):
+        order_nr = 'order-' + order_nr
+        party = get_object_or_404(BookAParty, order_nr=order_nr)
+
+        # Create a form and populate its fields with the data from the party instance
+        form = BookingForm(initial={
+            'party_theme': party.party_theme,
+            'balloons': party.balloons,
+            'bouncy_castle': party.bouncy_castle,
+            'kids_age': party.kids_age,
+            'number_of_teepees': party.number_of_teepees,
+            'street': party.street,
+            'city': party.city,
+            'county': party.county,
+            'eircode': party.eircode,
+            'date': party.date,
+            'email': party.email,
+            'phone_number': party.phone_number,
+            'additional_info': party.additional_info
+        })
+
+        context = {'form': form, 'order_nr': order_nr}
+        return render(request, self.template_name, context)
+
+    def post(self, request, order_nr):
+        order_nr = 'order-' + order_nr
+        party = get_object_or_404(BookAParty, order_nr=order_nr)
+        form = BookingForm(request.POST, instance=party)
+        if form.is_valid():
+            form.save()
+            return redirect('submitted_parties')
+        context = {'form': form, 'order_nr': order_nr}
+        return render(request, self.template_name, context)

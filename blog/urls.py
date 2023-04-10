@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-from .views import GalleryListView, SeeGalleryView, ProductsListView, ProductView, ContactUsView, AboutUsView, BookAPartyView, submitted_parties
+from .views import GalleryListView, SeeGalleryView, ProductsListView, ProductView, ContactUsView, AboutUsView, BookAPartyView, submitted_parties,EditPartyView
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
@@ -12,6 +12,7 @@ urlpatterns = [
     path('products/<slug:slug>/', ProductView.as_view(), name='products_detail'),
     path('bookapaty/', BookAPartyView.as_view(), name='book_a_paty'),
     path('submitted-parties/', submitted_parties, name='submitted_parties'),
+    path('submitted-parties/<slug:order_nr>/edit/', EditPartyView.as_view(), name='edit_party'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
 ]
