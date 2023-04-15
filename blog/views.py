@@ -259,7 +259,7 @@ class BookAPartyView(View):
             party.save()
 
             # Redirect the user to the submitted parties page
-            return redirect(reverse('submitted-parties'))
+            return redirect(reverse('submitted_parties'))
 
         context = {'form': form}
         return render(request, self.template_name, context)
