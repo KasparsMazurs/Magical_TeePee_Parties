@@ -2,7 +2,7 @@ from . import views
 from django.urls import path
 from .views import (GalleryListView, SeeGalleryView, ProductsListView,
                     ProductView, ContactUsView, AboutUsView, BookAPartyView,
-                    submitted_parties, EditPartyView, )
+                    submitted_parties, EditPartyView, DeletePartyView,)
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
@@ -17,6 +17,8 @@ urlpatterns = [
     path('submitted-parties/', submitted_parties, name='submitted_parties'),
     path('submitted-parties/<slug:order_nr>/edit/', EditPartyView.as_view(),
          name='edit_party'),
+    path('delete_party/<int:party_id>/', DeletePartyView.as_view(), 
+         name='delete_party'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
 ]

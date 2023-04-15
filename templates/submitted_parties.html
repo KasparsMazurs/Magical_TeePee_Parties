@@ -15,7 +15,20 @@
             <p>Data: {{ party.date }}</p>
             <p>Price: {{ party.price }}</p>
             <p>You will have: {{ party.number_of_teepees }} teepees</p>
-            <a href="{% url 'edit_party' party.id %}">Edit</a>
+
+            <!-- Delite and Edit party -->
+            <div class="row">
+              <div class="col-md-6">
+                <a class="btn btn-primary" href="{% url 'edit_party' party.id %}"><strong>Edit</strong></a>
+              </div>
+              <div class="col-md-6">
+                <!-- Delite party form -->
+                <form action="{% url 'delete_party' party.id %}" method="post">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-danger float-md-end" onclick="return confirm('Are you sure you want to cancel this party?')">Cancel pary</button>
+                </form>
+              </div>
+            </div>
         </div>
       </div>
       {% else %}
@@ -25,7 +38,19 @@
             <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
             <p>Data: {{ party.date }}</p>
             <p>You will have: {{ party.number_of_teepees }} teepees</p>
-            <a class="nav-link" href="{% url 'edit_party' party.id %}"><strong>Edit</strong></a>
+            <!-- Delite and Edit party -->
+            <div class="row">
+              <div class="col-md-6">
+                <a class="btn btn-primary" href="{% url 'edit_party' party.id %}"><strong>Edit</strong></a>
+              </div>
+              <div class="col-md-6">
+                <!-- Delite party form -->
+                <form action="{% url 'delete_party' party.id %}" method="post">
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-danger float-md-end" onclick="return confirm('Are you sure you want to cancel this party?')">Cancel pary</button>
+                </form>
+              </div>
+            </div>
         </div>
       </div>
       {% endif %}

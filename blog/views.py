@@ -326,6 +326,12 @@ class EditPartyView(View):
         # Populate the booking form with the party details
         form = BookingForm(request.POST, instance=party)
 
+        # Checks if the 'delete' button was clicked 
+        # and if it was, it deletes the corresponding party object
+        if 'delete' in request.POST:
+            party.delete()
+            return redirect(reverse('submitted_parties'))
+
         # If the form is valid, save the booking and
         # redirect to the submitted parties page
         if form.is_valid():
@@ -338,3 +344,21 @@ class EditPartyView(View):
         # If the form is not valid, render the form again with error messages
         context = {'form': form, 'order_nr': order_nr}
         return render(request, self.template_name, context)
+
+
+class DeletePartyView(View):
+    """
+    Allows to delete submitted party
+    """
+    def post(self, request, party_id):
+        # Retrieve the party object using its ID,
+        # or return a 404 error if it doesn't exist
+        party = get_object_or_404(BookAParty, id=party_id)
+
+        # Call the `delete()` method on the party object
+        # to delete it from the database
+        party.delete()
+
+        # Redirect to the submitted parties page using the `reverse()`
+        # function to look up the URL by name
+        return redirect(reverse('submitted_parties'))
