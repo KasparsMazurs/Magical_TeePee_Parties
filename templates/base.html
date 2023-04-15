@@ -35,32 +35,9 @@
 
 </head>
 <body>
-
-    <!-- Nav bar -->
-    <div class="row nav-bg">
-        <div class="col-md-10">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="{% url 'home' %}"><h1 class ="header">Magical TeePee Parties</h1></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
-                        <a class="nav-link" href="{% url 'products' %}">Products</a>
-                        <a class="nav-link" href="{% url 'book_a_paty' %}">Book a party</a>
-                        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-                        <a class="nav-link" href="{% url 'contactus' %}">Contact us</a>
-                        <a class="nav-link" href="{% url 'aboutus' %}">About us</a>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-        </div>
-
-        <!-- Logo/registration -->
-        <div class="col-md-2">
+    <div class="logo">
+        <div>
+            <!-- Logo/registration -->
             <ul class="nav justify-content-end">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -78,6 +55,26 @@
                 </li>
                 {% endif %}
             </ul>
+        </div>
+        <!-- Nav bar -->
+        <div>   
+            <nav class="navbar navbar-expand-lg bg-body-tertiary right">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link" href="{% url 'products' %}">Products</a>
+                            <a class="nav-link" href="{% url 'book_a_paty' %}">Book a party</a>
+                            <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                            <a class="nav-link" href="{% url 'contactus' %}">Contact us</a>
+                            <a class="nav-link" href="{% url 'aboutus' %}">About us</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>
 
