@@ -3,12 +3,14 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.utils.text import slugify
 
-
-
+# This status will be used for publishing posts
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
+    """
+    Create a model for posts
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -21,6 +23,9 @@ class Post(models.Model):
 
 
 class Meta:
+    """
+    All posts will be displayed the newest first
+    """
     ordering = ["-created_on"]
 
     def __str__(self):
@@ -31,6 +36,9 @@ class Meta:
 
 
 class Comment(models.Model):
+    """
+    Create a model for comments
+    """
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
     likes = models.ManyToManyField(
@@ -43,6 +51,9 @@ class Comment(models.Model):
 
 
 class Meta:
+    """
+    All posts will be displayed the oldest first
+    """
     ordering = ["created_on"]
 
     def __str__(self):
@@ -50,10 +61,17 @@ class Meta:
 
 
 class Image(models.Model):
+    """
+    Create a model for images which will be used for PostGallery
+    and PostProducts
+    """
     image = CloudinaryField('image')
 
 
 class PostGallery(models.Model):
+    """
+    Create a model for galleries
+    """
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     title_image = CloudinaryField('Title_image', default='placeholder')
@@ -62,6 +80,9 @@ class PostGallery(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        """
+        All gallerys will be displayed the newest first
+        """
         ordering = ['-created_on']
 
     def __str__(self):
@@ -69,6 +90,9 @@ class PostGallery(models.Model):
 
 
 class PostProducts(models.Model):
+    """
+    Create a model for products
+    """
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     title_image = CloudinaryField('Title_image', default='placeholder')
@@ -78,6 +102,9 @@ class PostProducts(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        """
+        All products will be displayed the newest first
+        """
         ordering = ['-created_on']
 
     def __str__(self):
@@ -85,6 +112,9 @@ class PostProducts(models.Model):
 
 
 class BookAParty(models.Model):
+    """
+    Create a model for booking parties
+    """
     party_themes = [
         ('JU', 'Jungle'),
         ('UN', 'Unicorn'),
@@ -129,8 +159,9 @@ class BookAParty(models.Model):
     approved = models.BooleanField(default=False)
     email = models.EmailField(default='', blank=False)
     phone_number = models.CharField(max_length=50, default='+353 ')
-    additional_info = models.TextField(default='You can add some additional information or ask us a question here.')
-    order_nr = models.SlugField(max_length=200, unique=True, editable=False, default='new_order')
+    additional_info = models.TextField(default='Ask us a question here.')
+    order_nr = models.SlugField(max_length=200, unique=True, editable=False,
+                                default='new_order')
     host = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
