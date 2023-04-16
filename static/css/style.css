@@ -162,16 +162,17 @@ a:active {
 }
 
 .btn-color {
-    border-radius: 10%;
-    background-color: blue;
+    border-radius: 15%;
+    background: linear-gradient(45deg, rgb(9, 255, 0), #0ff, #f0f);
+    color: #000000;
     font-size: 30px;
 }
 
 .btn-color:hover {
-    border: none;
-    background-color: green;
-    font-size: 50px;
+    border-radius: 20%;
     text-decoration: none;
+    color: #000000;
+    padding: 15px 30px;
 }
 
 .bg {
@@ -184,6 +185,11 @@ a:active {
 }
 
 /** Post details **/
+
+.h1-bg {
+    background-color:  #edf3f1;
+    margin-top: 2px;
+}
 
 .comments-bg {
     background-color: rgba(136, 144, 252, 0.4);
@@ -216,6 +222,15 @@ a:active {
 }
 
 /** like btn **/
+
+.no_click {
+    display: none;
+}
+  
+.click {
+    display: inherit;
+    background-color: #edf3f1;
+}
 
 .like {
     font-size: x-large;

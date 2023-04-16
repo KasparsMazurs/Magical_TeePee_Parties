@@ -17,30 +17,40 @@
             {{ post.content | safe }}
         </p>
     </div>
-    <div class="float-end">
-            <strong>
-                {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                    {% csrf_token %}
-                    {% if liked %}
+    <div class="float-end" >
+        <strong>
+            {% if user.is_authenticated %}
+            <form action="{% url 'post_like' post.slug %}" method="POST">
+                {% csrf_token %}
+                {% if liked %}
+                <p> Like 
                     <button type="submit" name="blogpost_id" value="{{post.slug}}" class="like"><i class="fa-solid fa-thumbs-up"></i></button>
-                    {% else %}
-                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="like"><i class="fa-regular fa-thumbs-up"></i></button>
-                    {% endif %}
-                </form>
+                </p>
                 {% else %}
-                <span><i class="fa-regular fa-thumbs-up"></i></span>
+                <p> Like 
+                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="like"><i class="fa-regular fa-thumbs-up"></i></button>  
+                </p>
                 {% endif %}
-                <span>{{ total_likes }} </span>
-            </strong>
-        <button type="button" class="btn btn-primary">Share <i class="fa-solid fa-share"></i> </button>
+            </form>
+            {% else %}
+            <p id="message" class="no_click">If you want to like this post you need to register!</p>
+            <button id="like-btn" type="button" class="like"><i class="fa-regular fa-thumbs-up"></i></button>
+            {% endif %}
+            <span>Total likes:{{ total_likes }} </span>
+        </strong>
     </div>
 </div>
 
 <!-- Comments -->
-<h1 class="text-center">
+<h1 class="text-center h1-bg">
     Comments
 </h1>
+
+{% if comments|length == 0 %}
+<div class="comments-bg text-center">
+    <h3>You can be the first to leave a comment!</h3>
+</div>
+{% endif %}
 
 {% for comment in comments %}
 
@@ -63,7 +73,6 @@
         </div>
         {% else %}
         {% if user.is_authenticated %}
-
         <h3>Leave a comment:</h3>
         <p>Posting as: {{ user.username }}</p>
         <form class="text-center text-muted" method="post" style="margin-top: 1.3em;">
@@ -72,6 +81,7 @@
             <button class="btn btn-secondary" type="submit" class="btn btn-signup btn-lg">Submit</button>
         </form>
         {% endif %}
+        <h3 class="text-center">If you like to leave a comment, please register!</h3>
         {% endif %}
     </div>
 </div>

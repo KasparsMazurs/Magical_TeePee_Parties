@@ -4,11 +4,14 @@
 <!-- Display Jumbotron -->
 <div class="jumbotron-bg">
     <div class="bg d-flex justify-content-center align-items-center">
-      <a class="btn btn-primary btn-color" href="{% url 'book_a_paty' %}" role="button">Book a party</a>
+      <a class="btn btn-primary btn-color" href="{% url 'book_a_paty' %}" role="button">Book party</a>
     </div>
 </div>
 
 <!-- Display posts -->
+<div class="h1-bg">
+    <h1 class="text-center">News</h1>
+</div>
 {% for post in post_list %}
 <div class="card">
         <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 row-bg">
