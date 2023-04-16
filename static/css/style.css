@@ -1,6 +1,13 @@
 * {
     padding: 2px;
-    font-family: 'sans-serif';
+}
+
+p {
+    font-family: 'Alice', serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Playball', cursive;
 }
 
 body{
@@ -15,15 +22,10 @@ body{
 /** Header **/
 
 .header {
-    font-family: 'Dancing Script', 'sans-serif';
     font-size: 50px;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-}
-
-h1, h2 {
-    font-family: 'Dancing Script', 'sans-serif';
 }
 
 /** Logo **/
@@ -195,10 +197,6 @@ a:active {
     background-color: rgba(136, 144, 252, 0.4);
     overflow: hidden;
     margin: 2px;
-}
-
-.card-text {
-    font-family: Arial;
 }
 
 .max-high {
