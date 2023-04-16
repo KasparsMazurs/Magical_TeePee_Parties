@@ -56,26 +56,22 @@
                 {% endif %}
             </ul>
         </div>
-        <!-- Nav bar -->
-        <div>   
-            <nav class="navbar navbar-expand-lg bg-body-tertiary right right">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-                    </button>
-                    <div class="collapse navbar-collapse h1-bg" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link" href="{% url 'home' %}">Home</a>
-                            <a class="nav-link" href="{% url 'products' %}">Products</a>
-                            <a class="nav-link" href="{% url 'book_a_paty' %}">Book a party</a>
-                            <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
-                            <a class="nav-link" href="{% url 'contactus' %}">Contact us</a>
-                            <a class="nav-link" href="{% url 'aboutus' %}">About us</a>
-                        </div>
-                    </div>
+        <!-- Nav bar -->  
+        <nav class="navbar navbar-expand-lg bg-body-tertiary right">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse h1-bg" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link" href="{% url 'products' %}">Products</a>
+                    <a class="nav-link" href="{% url 'book_a_paty' %}">Book a party</a>
+                    <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                    <a class="nav-link" href="{% url 'contactus' %}">Contact us</a>
+                    <a class="nav-link" href="{% url 'aboutus' %}">About us</a>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </div>
 
     <!-- Content -->
