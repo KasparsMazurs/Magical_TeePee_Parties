@@ -35,35 +35,51 @@ body{
    background-size: contain;
    background-repeat: no-repeat;
    background-position: center;
-   height: 11vh
+   height: 15vh;
 }
 
 .logo-bg {
     background-color:  #edf3f1;
-    height: 11vh
+    height: 15vh;
 }
 
-/* Media query for screens smaller than 435px */
+  /* Media query for screens smaller than 435px */
 @media (max-width: 435px) {
     .logo {
         background-image: initial;
     }
+
+    .nav-link {
+        font-size: 10px;
+    }
   }
 
-  /* Media query for screens smaller than 1200px */
-@media (max-width: 1200px) {
+  /* Media query for screens smaller than 1400px */
+@media (max-width: 1400px) {
     .logo {
         background-position: left;
     }
   }
 
 /** Nav bar **/
+.nav-bg {
+    background-color:  #edf3f1;
+    margin-top: 2px;
+    width: 100%;
+}
+
 .right {
     float: right;
   }
 
 .nav-link {
     color: black;
+    margin: 0;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link1 {
