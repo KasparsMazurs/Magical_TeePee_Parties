@@ -32,17 +32,25 @@ h1, h2 {
    background-image: url(https://lh3.googleusercontent.com/pw/AJFCJaXTKRgVPMYIwAbHds28RIRLK07LCP299fkX2iPQ4K-5n89Je3SwxoP8DkF_1pCaL-a9COp_TbXOpNlMOhS55-pFvs5XmBrYkvD4__GypObU0toDklfiA7XlyFPqdT4XKm8FcQrDn7SBoXe6Lr9QQUOTSg=w3720-h1860-s-no?authuser=0);
    background-size: contain;
    background-repeat: no-repeat;
-   background-position: left;
-   margin-top: 1vh;
-   margin-bottom: 1vh;
-   margin-left: 1vh;
-   height: 10vh;
+   background-position: center;
+   height: 11vh;
+}
+
+.logo-bg {
+    background-color:  #edf3f1;
 }
 
 /* Media query for screens smaller than 435px */
 @media (max-width: 435px) {
     .logo {
         background-image: initial;
+    }
+  }
+
+  /* Media query for screens smaller than 1200px */
+@media (max-width: 1200px) {
+    .logo {
+        background-position: left;
     }
   }
 
