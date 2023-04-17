@@ -11,10 +11,11 @@
       <h2>This party is approved:</h2>
       <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_approved">
         <div class="col-md-12">
-            <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
-            <p>Data: {{ party.date }}</p>
-            <p>Price: {{ party.price }}</p>
+            <h2>Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
+            <p>We plan to organize your party on {{ party.date }}</p>
+            <p>Party will be organized in: {{ party.street }}, {{ party.city }}, Co., {{ party.county }}, {{ party.eircode }}</p>
             <p>You will have: {{ party.number_of_teepees }} teepees</p>
+            <p><strong>Price: {{ party.price }} Eur.</strong></p>
 
             <!-- Edit party -->
             <div class="row">
@@ -29,7 +30,8 @@
       <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_pending">
         <div class="col-md-12">
             <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
-            <p>Data: {{ party.date }}</p>
+            <p>Your party will be organized on {{ party.date }}</p>
+            <p>Party is planned to organize in: {{ party.street }}, {{ party.city }}, Co., {{ party.county }}, {{ party.eircode }}</p>
             <p>You will have: {{ party.number_of_teepees }} teepees</p>
             <!-- Delite and Edit party -->
             <div class="row">

@@ -236,6 +236,27 @@ a:active {
     padding: 3vh;
 }
 
+  /* Media query for screens smaller than 500px */
+  @media (max-width: 500px) {
+    .login-bg  {
+        height: 120vh;
+    }
+  }
+
+  /* Media query for screens smaller than 1000px */
+  @media (max-width: 1000px) {
+    .login-bg  {
+        height: 75vh;
+    }
+  }
+
+  /* Media query for screens smaller than 1180px */
+  @media (max-width: 1180px) {
+    .login-bg  {
+        height: 60vh;
+    }
+  }
+
 /** like btn **/
 
 .no_click {
@@ -297,6 +318,13 @@ a:active {
     margin-top: 4vh;
     margin-bottom: 4vh;
 }
+
+/* Media query for screens smaller than 500px */
+@media (max-width: 500px) {
+    .s-font {
+        font-size: 13px;
+    }
+  }
 
 /** Alert **/
 
