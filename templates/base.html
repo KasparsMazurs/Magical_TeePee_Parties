@@ -38,8 +38,11 @@
 
 </head>
 <body>
-    <div class="logo-bg logo">
-        <div>
+    <a class="logo-link" href="{% url 'home' %}">
+        <Div class="logo-bg logo"></Div>
+    </a>
+    <div class="logo-bg">
+        <div class="line right">
             <!-- Logo/registration -->
             <ul class="nav justify-content-end">
                 {% if user.is_authenticated %}
@@ -60,7 +63,7 @@
             </ul>
         </div>
         <!-- Nav bar -->  
-        <nav class="navbar navbar-expand-lg bg-body-tertiary right">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
             </button>
@@ -76,6 +79,7 @@
             </div>
         </nav>
     </div>
+    <div class="extra-bg"></div>
 
     <!-- Content -->
     <main>
@@ -85,7 +89,7 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="container-fluid">
         <ul class="social-networks">
             <li>
                 <a href="https://www.facebook.com/MagicalTeepeeParties" target="_blank" rel="noopener" aria-label="Visit our Facebook page (open in a new tab)"><i class="fa-brands fa-facebook"></i></a>
