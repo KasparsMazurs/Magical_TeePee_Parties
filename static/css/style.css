@@ -354,7 +354,14 @@ a:active {
     display: none;
 }
 
-/** BookingForm **/
+/** BookingForm / prices **/
+
+/* Media query for screens smaller than 1400px */
+@media (max-width: 1400px) {
+    .smal {
+        font-size: 10px;
+    }
+  }
 
 .extras {
     margin-left: 2vh;

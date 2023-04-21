@@ -2,13 +2,14 @@
 
 {% block content %}
 
-<h1>Submitted Parties</h1>
+<h1 class="nav-bg">Submitted Parties</h1>
 
 <!-- Display submited paries -->
 {% if parties %}
     {% for party in parties %}
       {% if party.approved %}
-      <h2>This party is approved:</h2>
+      <br>
+      <h2 class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_approved">This party is approved:</h2>
       <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_approved">
         <div class="col-md-12">
             <h2>Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
@@ -26,7 +27,8 @@
         </div>
       </div>
       {% else %}
-      <h2>This party is waiting for approval:</h2>
+      <br>
+      <h2 class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_pending">This party is waiting for approval:</h2>
       <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_pending">
         <div class="col-md-12">
             <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
