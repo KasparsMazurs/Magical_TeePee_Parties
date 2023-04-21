@@ -119,8 +119,10 @@ body{
 footer {
     background-color: rgba(237, 243, 241, 0.8);
     min-height: 120px;
-    margin: 0;;
+    margin: 0;
 }
+
+
 
 .social-networks {
     text-align: center;   
@@ -135,6 +137,19 @@ footer {
     margin: 1%;
     padding: 5%;
     color: #3a3a3a;
+}
+
+.COPYRIGHT {
+    padding-top: 5vh;
+}
+
+.contact {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.white{
+    color: white;
 }
 
 /** Blog enterenc **/
