@@ -363,6 +363,13 @@ a:active {
     }
   }
 
+  /* Media query for screens smaller than 800px */
+@media (max-width: 800px) {
+    .smal {
+        font-size: 8px;
+    }
+  }
+
 .extras {
     margin-left: 2vh;
 }
