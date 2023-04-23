@@ -1,6 +1,8 @@
+![MTP Logo](https://lh3.googleusercontent.com/pw/AJFCJaXR51mMd6teY8KzLldeNL-_-kLlh4viaFTkoGFrPvnVzNKtn1_HV4MYm8FPIhBT4iMlgMJapYgF5CgAA_I8QfFgB3QMjaPdBfM-Zf5uJoGBW8X-ppZSP7n9ODnDVuKiU2zSzzUn6mnN_Z8KaXaUcjTiYw=w125-h125-s-no?authuser=0)
+
 # Magical TeePee Parties
 
-![MTP Am I responsive image](https://lh3.googleusercontent.com/fife/APg5EOZMkzNHQwJ78VwjT3OpZAwqgYGmHNpAx_F1UPbRT7c5Mq5R1NKJbg2F_4rFjShpieh7clwqkQazLVBsyD-YZwQINIgrBY0lSZJCFQuq2lwbGF3Hfc_Bd3q4IBdqB3-DRhn2zsCU5_NdrJ5nd8leCt8icmnrfbxS_N7Kjnp09ujKNC8HuewY3ENwauBdN41WE-O6ANXRSEFz_5zpPtdQwJFHcAQ5w5oLT_Kyfvn_w35QIHlLOKukzd1Q2UP6MsZitCqm2lge4WP8R8-z7gBOuM14nE7sKXI56HcbZxKi0nLsVXiOHZVhpLIc4g_gIunDUyrIxjXA-R0aJEw85hfr5236IjDS4zgx82-Nw-YZsovVfLGVqNKzr8YiiWj_Pec4snd45pHuaebl2huHwao3IOZO0ShWXzk16u2lndbJBWE3OIUGQN8ySR-YTRHf0PbciNoA-mrzR-izLDfa1BNiVWbUI7lJlrJKvdT1iQduHs-bp9R0jy0B_1SXHxYXJMJsI2WjZlPh2gwA4kabRBEqhVXXZnb1Ga_rfwfo3DAOsQgPgC0n_-GKk7k9iYSTrJq0r879xCMCfQnlNGIGiUWEE6Rw1LU6Z10j8XRbOMsS8KxhKEtgFV6sJTxqLyqkJvJtvIUu-Hbono_LWMydM6byWm0MdZJDLFqSzhiQm4EHNFcoTZFv8K9E3ER483Ua4KcsvfrZzTxoCtrQh2wyeEKwftgSl2HSsMrB7UKYXQoYEaGGXEZDl0O61Le98L2VgR2XQlkrVMkLDRcSuJFFUaXBPHY7o80PmaPuu2BfTo_LNvWcvd6_frsTkgUDSyFeUjA94QhdpMYV_y9NjESXX3GJe92yBgLZTBeSvubKi-fYGwUn-b1NmBSe6xrftRrPupRnKt4R0Krk9HrEliN25lKPQ56ApOqrUJV_BRo06GhKwdH_7x2r5vrDZl9nfJvgis2__lVv-I3W4ZA4C-jCPWb3wj5DQIyacnhu1JjMEpr77hJH3OWWisugGhBcwDpq-c9Qs6ZGxCmDGD78eot_9H3_MQcr-jmjFEi8ZvIutySD2GaQrxVjg0lQoICpnIlGMhRVHGQos4waHjDuQ8FetHp1nmMffhi6CJCjmPmp3POYlW3q0U7EX78gOeWnJAOG1qGovPpV6KljrdwEsGOa5zTSH8Xf2fEx5Rwt-cZ2kMciAHP0EAWf8BKqICOU8WZ06V9XnyXENJk99hklDJ0LGwwEpODvipYl3FWfn5AAWyYlVPbZj7cmUtp22Cgyqf_d8Al2oBEZ0IN6BaWLSoUYKx_QXduNGTZUFCP_r4kYqN2u5aSTV5B0b4xXH3gJnVg-fzy_SHcX3O5kVnpEh2xErCgylWW5LKVUyvF8iac7Re-RcWoz3RzlpYNNgTDCsANzqCqUi3gDAbCLNeR5cqIYtnAFYyYh5apl1fWiJ6kOZxs9mKybtLtZhS0v-6AY-TdFhi5s7sjFTYWeVRRwSW5lnnTTR0ltNGo1tf4dixlCKngeHQLvT0OI-m2oi35ioGi7BGKSXiVFdf9ROvnWPNiDtf8Asr4stsAQ4XBVgDce3PqQiKTpw4YJHcKWfQPiv_WUHHRohfcd99gThayENXCkanrH5nECKEvk922259wFElIua0NqMGBDP4ctULvB=w1657-h1024-s-no?authuser=0)
+![MTP Am I responsive image](https://lh3.googleusercontent.com/pw/AJFCJaWmXF_lzbBWX8l8aH6tpZSVDSuavlw9TIj5-jnMccXbhzOHKHkyuWr-NkIiL2-5r0179b5sgvpn10DoQeCVgEKEryLiuWq6ggcCti7B2Ygf43FQ0u11ui8MjwjdOtb7GAYMifQdXBC8y8Mttq9xmuUm4A=w1657-h1024-s-no?authuser=0)
 
 View the repository in GitHub <a href="https://github.com/KasparsMazurs/Magical_TeePee_Parties" target="_blank">here</a>
 
@@ -229,7 +231,7 @@ Users booking a party will have the advantage of seeing real-time availability, 
 
 Balsamiq was utilized to create the wireframes, and great effort was invested in ensuring that the final website would appear and function precisely as specified in the wireframes.
 
-![MTP wireframes](https://lh3.googleusercontent.com/fife/APg5EOaSWM2Ff78FJKD5GrwKCJbvoryTxj3YvfMsCkvh_P9Lsn_VCI-H6DheaMUXREcYtwMT9LOwTR-OIFcarWsYyrtIhn9X_FMKBiwC607sPvHNdxY3Wzw4mdJxj0qCHOduF2HidxRY8XZ_qeQJY8KkF-jWsVvagUxpWaxU2IHpqzNrQoyiyNJWjbMw9UUQ-Am0oDV-73Zwom5lfdVjqYo-563YcEWtTNip4izaF1b76JpwGVartPSmCalQx4L8OJwqs0VPQ6gDOKg1eXUIyiYJ7EyDpE0AayOQ0SNLkYZB_WvrcbgdPZcRuesc-LoJHlt4QHp_FfG0c9ewmRrLTT2Y47XkKamfHpdNPS4ZBzUPK87-TRI8UW6ElL3JhbKK3d_lhziuCo3bBg59UiT_50_QdDZgdfXDkgUfVAuJvoxTv8ee8_HXFs11U6pWYBQdAKlHsJOcljnm4SPhJXreQoewRug2u0bwlSnazKciRccjkXD-OiER2bV1kjjd03P7UkWVitwdOkK3T3KvFHrd4SfawOFYOjG1TWH1Pd353n6WblTQCc67ZG6SM3EMkr1hNOazgK_t6awn7YXc8nPHJvcVrKlviNtHM4utHZUgzktlqC9DHBibkZjCWoRDUCJBzLBX3ri8lF4tRV-u4-V2gNcADNXIKpq1eDyyXuvfT50X67qPDN3azPPBaL7Z3DoL5UOtxnNzWp_Jz5-cfHGL5EAylaLfp2leNdFdAra-8LzJgpWDS2L7eG6Rb8yhYRqJkHymjl8NWjvvFmGp-TwhvW72-Q98H_CmA7CvoTmXJUQXKq_9Mkas3-HI24xeYGOP_jcEDqzImn3Dd94gTvGbef6CFEFTYQbVF4TaMrLpuKn6RtR7k1MsS6CAi1tPAQ-IXKumFu0w1tz70sjVkSBvw9QUCfEg8gNzra_Pg1shaJans2Dv73UJoQW0QHIPjXUNYuWX0zwiutoP63w8oe2mjZ6rYxPHYEodQ0BBo3v-vc5J2y9Erh-AWV0cIPErw6zDOIzxEtLTW_0w2tcQjF4E0Yeo866eZojWlj3h2c2c9CI4JQOGiUzPagxmlKKw036deBdrTHXK8dsm-XmAYEtI09_lSzrFQHXkx4B0lC8kElrCeptlMNW6GC-eiCztHzRd6FZfPEnPbFo0jRGhVVYILq5DfOV2Ju4TKa9qDBFAEYZRDXDckKtyrev56Jcra832ndS78Ado4jhaJlVlBGdzu3wTIPprpXKsX5GjrjErk0W1lLV3tGJu17RVV7fxrJ18w_negDvrPO3EiijYPVRkGjK__F386Jyq-Fh1wTCsJ_2dbV9AD0TRt3TJqJkp1wQNXYLePivhXD1WfaY9OMbT8sjWTiR7Owf17iCjDqs-ED1VERAKJLtRhatwinRT12c9wWtnYQbxYbeYBITPDFuNCunL4CVZa8mOde6qbsuHRZ3zCiQfyU8uBzHj0JNYmUXpTU7Wby270eFllzfza8JQh5Nam1shle4uwyUpYdPXVHtWpJGJ6m1g-rvnO7qzMWOkWga7serLS3ykYQLE6YnOP0_knFSkPPMeR0NZdlLz7I6Jh5DiUYwCyEiFXAxa3CnGg1oSwCEncaA0F7khFjw7h-xFTOqmIbpNMgDxUCRzZXa1bFcQqr6UJns_WCDX=w905-h1324-s-no?authuser=0)
+![MTP wireframes](https://lh3.googleusercontent.com/pw/AJFCJaXOztKMVVvXojBuZBK3pqJ4hiF1pbzhubAR2pfyIrpic5d5yTdzX5c8V4gEoHCGL0mz2fV4vPK3kxJJPfvuS9TPpxakncBQ5h9kfv6l9ORBS2LTfQucWscz-Vrwvi2mtHd4JjxlLzbOnpuopkU0PARo6w=w905-h1324-s-no?authuser=0)
 
 ### Fonts
 
@@ -245,11 +247,95 @@ Regularly during development, Chrome Developer Tools was utilized to test the we
 
 **HTML**
 
+Code passed official <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmagical-teepee-parties.herokuapp.com%2F">W3C Validator testing.</a> 
 
+**CSS**
 
+Css passed official <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmagical-teepee-parties.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">W3C Validator testing.</a> 
 
+**Javascript**
 
-![MTP Lighthouse](https://lh3.googleusercontent.com/pw/AJFCJaUNxwdhAs9P14iKLuTUfK9ngFaVgiQ7R317G5t-heFL3BzP3YUPYg3T854_8Tg6r6Eihd-yNXYa6Mbr6wnyNyyJhZ3NLvFcwIEUj3urheieqAkaWamEd-GcnfYZLgkIhkNJ0IHZQfGG6rZHBKcd7ikDBQ=w1009-h620-s-no?authuser=0)
+The alert function was tested with <a href="https://jshint.com/">jshint.com.</a>
+
+**Python**
+
+The code was tested with PEPE8.
+
+**Lighthouse**
+
+Pages were tested with Chrome Developer Tools using the Lighthouse resource.
+
+![MTP Lighthouse](https://lh3.googleusercontent.com/pw/AJFCJaVQ_MuU_EV5E2_xWcaQTEJN_WH6P4VNDnwb2eF5nn6vDiDcj3ncpDsaQPaPecmZ6Ma3bMT-xqHYd8ObwXfmTEjjHxVylDhPjFJeS8PX0cLd2YUPIRDci47HzSrTBa4DbsbxotE7kdj5QTPpNGprf0Ks5A=w1009-h620-s-no?authuser=0)
+
+### **Functional Testing**
+
+- Landing page (Homepage)
+
+    - Clicking on the logo image will take the user to the homepage.
+    - Pressing the button on the Jumbotron will redirect the user to the party booking section.
+    - Clicking on a post will open the post details.
+
+- Post delais
+
+    - When the like button is clicked, the color of the button changes and the total number of likes increases.
+    - If the user is not authorized and clicks the like button, a message appears.
+    - All comments are visible.
+    - When a user is logged in, they can leave a comment.
+    - After a comment is submitted, the admin can see it in the admin panel and approve it.
+
+- Footer
+
+    - The links located in the footer function correctly as intended.
+
+- Products
+
+    - The list of products is visible
+    - The links located in the products function correctly as intended.
+
+- Product details
+
+    - Product details and images of product are visible
+
+- Book party
+
+    - The link to "Submitted Parties" is functioning properly.
+    - If the necessary information is not provided by the customer, a notification will be displayed.
+    - When a party request is submitted, it can be viewed in the admin panel and the user will be redirected to the "Submitted Parties" page.
+
+- Gallery
+
+    - The list of gallerys is visible
+    - The links located in the gallerys function correctly as intended.
+
+- Gallery details
+
+    - All images associated with the gallery are visible.
+
+- Contact us
+
+    - The email API is functioning correctly as intended.
+
+- Login/Logout/Register pages
+
+    - The account creation, login, and logout functionalities work without any issues for the user.
+
+### Browser Testing
+
+Pages behave as expected in all browsers tested. The website was tested in Chrome, Firefox, Brave Browser, Edge and Opera.
+
+### Bugs
+
+**Fixed Bugs**
+
+- I encountered a booking error when attempting to book a party. The issue was due to a code segment that verifies party ID uniqueness by checking past bookings. However, since there were no previous bookings, the code was unable to generate a unique ID number, resulting in the error.
+
+- All images in the galleries became visible in any of the galleries due to an error in the views.py file.
+
+- There were cases where bookings were automatically approved.
+
+**Unfixed Bugs**
+
+There are cases where the alerts may not appear on the screen.
 
 ## Deployment
 
@@ -295,27 +381,7 @@ Throughout the development process, version control was managed using Github. Th
 - Inspiration for news was taken from the Code Institute project "Blog"
 - Stackoverflow for providing solutions for problems in code
 
+## Lessons learned
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-
-
-## FAQ about the uptime script
-
-- An ID that is randomly generated each time the workspace is started.
-
-**Anything more?**
-
-`uptime.sh`
+- Need to use more Agile methodology to be more presist in results
+- Blog / Gallery / Booking should be in separate apps
