@@ -1,4 +1,4 @@
-![MTP logo](https://lh3.googleusercontent.com/pw/AJFCJaWpEdbcTvo5v-yvBWJEXHG-zWzH8mVsn8HppyR9T7QYm9keK6uwV58rzUaNyrog8iuh8xqSvex-vj1tQRSAE88Gq0hkHBr9IJEfNia6WsFaAbYgpCHVLxjxhrizVmqAyd_80FkRt0eGl93Q0mzpq__CPA=w125-h125-s-no?authuser=0)
+![MTP logo](https://lh3.googleusercontent.com/pw/AJFCJaV5wY5j5gNy3g1mRb1YLF2PO1fGkepki0JcJtOIuDa_YntMnNJdNb-6EhnZnuY5ghaj-wg3Ehc-mi3NbMcthi1_zr1R0Vg7nwKWXwCvL-jMLm0u5NVuuBL9tJWQycPR3TBZa1jwB8AtuVcJMtcv_0kQTw=w125-h125-s-no?authuser=0)
 
 # Magical TeePee Parties
 
