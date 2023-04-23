@@ -80,8 +80,9 @@
             {% csrf_token %}
             <button class="btn btn-secondary" type="submit" class="btn btn-signup btn-lg">Submit</button>
         </form>
-        {% endif %}
+        {% else %}
         <h3 class="text-center">If you like to leave a comment, please register!</h3>
+        {% endif %}
         {% endif %}
     </div>
 </div>
