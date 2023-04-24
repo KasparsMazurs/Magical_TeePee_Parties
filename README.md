@@ -207,7 +207,11 @@ The mission, goals, and vision of Magical Teepee Parties are presented to the us
 
 ## **Future Features**
 
-In the upcoming iteration, our users can expect to have access to three new features that we will be introducing. Four features aim to enhance the overall user experience and provide additional functionality to meet their needs. We are excited to bring these new additions to our platform and look forward to the positive impact they will have on our users.
+- In the upcoming iteration, our users can expect to have access to three new features that we will be introducing. Four features aim to enhance the overall user experience and provide additional functionality to meet their needs. We are excited to bring these new additions to our platform and look forward to the positive impact they will have on our users.
+
+- In the next iteration, a manual option for naming images will be added in the admin panel during image upload. Currently, each image is automatically given a name. This new feature will allow for more control and customization when it comes to naming and organizing images for the website.
+
+- In our next iteration, we plan to improve the presentation of both product and gallery images, as the current display can appear cluttered and disorganized. By enhancing the visual experience of our website, we aim to improve the overall user experience and increase engagement with our products and services.
 
 **Share**
 
@@ -335,7 +339,7 @@ Pages behave as expected in all browsers tested. The website was tested in Chrom
 
 **Unfixed Bugs**
 
-There are cases where the alerts may not appear on the screen.
+The product description in the Products page contains a visible <p> tag.
 
 ## Deployment
 

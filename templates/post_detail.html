@@ -68,8 +68,8 @@
 <div class="container border border-2 comments-bg margin-top">
     <div>
         {% if commented %}
-        <div class="alert alert-success" role="alert">
-            Your comment is awaiting approval
+        <div>
+            <h2>Your comment is awaiting approval</h2>
         </div>
         {% else %}
         {% if user.is_authenticated %}

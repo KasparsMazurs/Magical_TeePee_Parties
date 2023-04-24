@@ -28,7 +28,10 @@
       </div>
       {% else %}
       <br>
-      <h2 class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_pending">This party is waiting for approval:</h2>
+      <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_pending">
+        <h2>This party is waiting for approval:</h2>
+        <p>We will reach out to you shortly to confirm the party details.</p>
+      </div>
       <div class="row container h-100 d-flex justify-content-center align-items-center border border-2 bg_pending">
         <div class="col-md-12">
             <h2> Your chosen party theme is: {{ party.get_party_theme_display }}</h2>
